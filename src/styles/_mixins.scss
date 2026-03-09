@@ -1,0 +1,25 @@
+@use "./variables" as vars;
+
+/* Styling Mixins*/
+
+/* Text */
+
+
+/* Responsiveness mixins */
+@mixin for-desktop-up {
+  @media (max-width: vars.$bp-desktop) {
+    @content;
+  }
+}
+
+@mixin for-tablet-up {
+  @media (max-width: vars.$bp-tablet) {
+    @content;
+  }
+}
+
+@mixin for-mobile-up {
+  @media (max-width: vars.$bp-mobile) {
+    @content;
+  }
+}
