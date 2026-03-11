@@ -1,4 +1,4 @@
-@use "./mixins.scss" as *;
+@use './mixins.scss' as *;
 /* GLOBAL RESETS AND STYLING */
 
 html,
@@ -15,7 +15,11 @@ body {
 }
 
 body {
-  font-family: url(../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf);
+  font-family: 'primary-font', Arial, sans-serif;
   line-height: var(--line-height-primary);
-  background-color: var(--neutral-000);
+  background-color: #faf9f9;
+}
+
+button {
+  font-family: 'primary-font', Arial, sans-serif;
 }

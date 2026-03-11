@@ -8,4 +8,4 @@ import { Logo } from '../../shared/icons/logo/logo';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {}
+export class NavbarComponent {}

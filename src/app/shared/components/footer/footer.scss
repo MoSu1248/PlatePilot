@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: var(--font-size-6);
+    color: var(--neutral-900);
+  }
+
+  ul {
+    list-style: none;
+    gap: 2rem;
+    display: flex;
+  }
+}

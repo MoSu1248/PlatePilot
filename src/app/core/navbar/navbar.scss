@@ -4,7 +4,7 @@
   align-items: center;
   padding: 1.5rem 2rem;
   color: white;
-  border-bottom: 1px solid var(--neutral-300);
+  border-bottom: 2px solid var(--neutral-200);
 }
 
 .logo {
@@ -32,7 +32,7 @@
 }
 
 button {
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 1.5rem;
   border-radius: var(--radius-4);
   background-color: var(--neutral-600);
   cursor: pointer;

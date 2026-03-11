@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './favourites.html',
   styleUrl: './favourites.scss',
 })
-export class Favourites {}
+export class FavouritesComponent {}
