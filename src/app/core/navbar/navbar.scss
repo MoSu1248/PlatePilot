@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 10%;
   color: white;
   border-bottom: 2px solid var(--neutral-200);
 }
@@ -21,6 +21,7 @@
 .nav-links a {
   text-decoration: none;
   color: var(--neutral-900);
+  font-weight: bold;
 }
 
 .nav-links a:hover {
@@ -33,7 +34,7 @@
 
 button {
   padding: 0.7rem 1.5rem;
-  border-radius: var(--radius-4);
+  border-radius: var(--radius-10);
   background-color: var(--neutral-600);
   cursor: pointer;
   border: none;
