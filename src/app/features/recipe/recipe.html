@@ -1,1 +1,43 @@
-<p>recipe works!</p>
+<div class="wrapper">
+  <section class="hero">
+    <h1 class="header">Explore our simple, healthy recipes</h1>
+    <p>
+      Discover eight quick, whole-food dishes that fit real-life schedules and taste amazing. Use
+      the search bar to find a recipe by name or ingredient, or simply scroll the list and let
+      something delicious catch your eye.
+    </p>
+  </section>
+
+  <section class="recipe-section">
+    <div class="recipe-filters">
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Max Prep Time <img src="assets/images/icon-chevron-down.svg" alt="" />
+        </button>
+        <div class="dropdown-menu">
+          <div class="dropdown-item">Option 1</div>
+          <div class="dropdown-item">Option 2</div>
+          <div class="dropdown-item">Option 3</div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Max Cook Time <img src="assets/images/icon-chevron-down.svg" alt="" />
+        </button>
+        <div class="dropdown-menu">
+          <div class="dropdown-item">Option 1</div>
+          <div class="dropdown-item">Option 2</div>
+          <div class="dropdown-item">Option 3</div>
+        </div>
+      </div>
+      <div class="search__container">
+        <img src="assets/images/icon-search.svg" alt="" />
+        <input type="text" placeholder="Search by name or ingredient…" />
+      </div>
+    </div>
+
+    <div class="recipe-grid">
+      <app-recipe-card></app-recipe-card>
+    </div>
+  </section>
+</div>

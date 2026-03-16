@@ -1,3 +1,5 @@
+@use '../../../styles/mixins' as *;
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -39,4 +41,6 @@ button {
   cursor: pointer;
   border: none;
   color: var(--neutral-000);
+
+  @include button-styling();
 }

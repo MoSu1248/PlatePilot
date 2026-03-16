@@ -1,0 +1,87 @@
+@use '../../../styles/mixins' as *;
+
+.hero {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+
+  .header {
+    @include heading();
+  }
+
+  p {
+    @include body;
+    width: 60%;
+  }
+}
+
+.recipe-section {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+
+  .dropdown-menu {
+    display: none;
+  }
+}
+
+.recipe-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .dropdown-toggle {
+    display: flex;
+    gap: 1rem;
+    @include body;
+    font-size: var(--font-size-7);
+    background-color: var(--neutral-000);
+    border-radius: 10px;
+    border: 1px solid var(--neutral-300);
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+  }
+
+  .search__container {
+    margin-left: auto;
+    display: flex;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    border: 1px solid var(--neutral-300);
+    background-color: var(--neutral-000);
+    width: 25%;
+    gap: 1rem;
+    input {
+      font-family: var(--primary-font);
+      border: none;
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      @include body;
+      font-size: var(--font-size-7);
+
+      &:focus {
+        outline: none; /* remove default */
+      }
+
+      &::placeholder {
+        @include body;
+        font-size: var(--font-size-7);
+      }
+    }
+  }
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 3rem 2rem;
+
+  
+}

@@ -1,8 +1,11 @@
+@use '../../../../styles/mixins' as *;
+
 .footer {
   display: flex;
   justify-content: space-between;
 
   p {
+    @include body();
     font-size: var(--font-size-6);
     color: var(--neutral-900);
   }

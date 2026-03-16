@@ -1,3 +1,5 @@
+@use '../../../styles/mixins' as *;
+
 .section__wrapper {
   width: 100%;
   display: flex;
@@ -5,7 +7,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .hero {
@@ -23,8 +25,8 @@
   }
 
   &__header {
+    @include heading();
     font-size: var(--font-size-1);
-    color: var(--neutral-900);
 
     span {
       position: relative;
@@ -45,20 +47,17 @@
   }
 
   &__text {
-    font-size: var(--font-size-6);
-    color: var(--neutral-900);
-    width: 26%;
+    @include body();
+    width: 40%;
     text-align: center;
   }
 
   &__btn {
-    padding: 0.7rem 1.5rem;
-    border-radius: var(--radius-10);
-    background-color: var(--neutral-600);
     cursor: pointer;
     border: none;
-    color: var(--neutral-000);
     width: fit-content;
+
+    @include button-styling();
   }
 
   &__img-container {
@@ -91,8 +90,7 @@
   }
 
   &__header {
-    font-size: var(--font-size-2);
-    color: var(--neutral-900);
+    @include heading();
   }
 
   .features__container {
@@ -100,6 +98,8 @@
     padding: 2rem 0;
     width: 100%;
     gap: 1rem; /* spacing between cards */
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -116,13 +116,11 @@
     gap: 2rem;
     width: 37%;
     h2 {
-      font-size: var(--font-size-2);
-      color: var(--neutral-900);
+      @include heading();
     }
 
     p {
-      color: var(--neutral-600);
-      font-size: var(--font-size-5);
+      @include body();
 
       span {
         position: relative;

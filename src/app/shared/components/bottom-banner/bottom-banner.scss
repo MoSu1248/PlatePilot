@@ -1,3 +1,5 @@
+@use '../../../../styles/mixins' as *;
+
 .bottomBanner {
   .section__wrapper {
     width: 100%;
@@ -44,23 +46,15 @@
     }
 
     h2 {
-      font-size: var(--font-size-2);
-      color: var(--neutral-900);
+      @include heading;
     }
 
     p {
-      color: var(--neutral-600);
-      font-size: var(--font-size-5);
+      @include body;
     }
 
     button {
-      padding: 0.7rem 1.5rem;
-      border-radius: var(--radius-10);
-      background-color: var(--neutral-600);
-      cursor: pointer;
-      border: none;
-      color: var(--neutral-000);
-      width: fit-content;
+      @include button-styling;
     }
   }
 }

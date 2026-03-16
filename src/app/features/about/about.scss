@@ -1,3 +1,5 @@
+@use '../../../styles/mixins' as *;
+
 .about__hero {
   display: flex;
   justify-content: space-between;
@@ -10,27 +12,20 @@
     gap: 2rem;
 
     span {
-      font-weight: bold;
-      color: var(--neutral-900);
-      background-color: var(--orange-500);
       width: fit-content;
       padding: 0.2rem 0.4rem;
       border-radius: 6px;
-      font-size: var(--font-size-5);
+      @include body();
+      font-weight: bold;
+      background-color: var(--orange-500);
     }
 
     h1 {
-      color: var(--neutral-900);
-      font-size: var(--font-size-2);
-      font-weight: bolder;
-      letter-spacing: var(--letter-spacing-1);
-      line-height: var(--line-height-2);
+      @include heading();
     }
 
     p {
-      font-size: var(--font-size-5);
-      color: var(--neutral-900);
-      font-weight: 400;
+      @include body();
     }
   }
 
@@ -63,11 +58,8 @@
   &-header {
     height: 100%;
     width: 45%;
-    font-size: var(--font-size-2);
-    color: var(--neutral-900);
-    font-weight: bolder;
-    letter-spacing: var(--letter-spacing-1);
-    line-height: var(--line-height-2);
+
+    @include heading();
   }
 
   &-list {
@@ -80,21 +72,12 @@
     li {
       height: fit-content;
       h3 {
-        margin-top: 0;
-        color: var(--neutral-900);
-        font-size: var(--font-size-4);
-        letter-spacing: var(--letter-spacing-2);
-        line-height: var(--line-height-3);
-        font-weight: bold;
+        @include subheading();
       }
 
       p {
-        margin-top: .8rem;
-        color: var(--neutral-600);
-        font-size: var(--font-size-6);
-        font-weight: 500;
-        line-height: var(--line-height-5);
-        letter-spacing: var(--letter-spacing-4);
+        margin-top: 0.8rem;
+        @include body();
       }
     }
   }
@@ -111,26 +94,18 @@
     flex-direction: column;
     gap: 2rem;
     h2 {
-      font-size: var(--font-size-2);
-      color: var(--neutral-900);
-      font-weight: bolder;
-      letter-spacing: var(--letter-spacing-1);
-      line-height: var(--line-height-2);
+      @include heading();
     }
 
     p {
-      font-size: var(--font-size-5);
-      color: var(--neutral-900);
-      font-weight: 400;
+      @include body();
     }
 
     ul {
       padding-left: 2rem;
 
       li {
-        font-size: var(--font-size-5);
-        color: var(--neutral-900);
-        font-weight: 400;
+        @include body();
 
         &::marker {
           color: var(--neutral-900);

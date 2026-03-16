@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RecipeCard } from './components/recipe-card/recipe-card';
 
 @Component({
   selector: 'app-recipe',
-  imports: [],
+  imports: [RecipeCard],
   templateUrl: './recipe.html',
   styleUrl: './recipe.scss',
 })

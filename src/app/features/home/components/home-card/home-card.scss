@@ -1,3 +1,5 @@
+@use '../../../../../styles/mixins' as *;
+
 .features__card {
   display: flex;
   flex-direction: column;
@@ -5,17 +7,18 @@
   justify-content: center;
   align-items: center;
   flex: 1;
-  min-width: none;
+  min-width: 25rem;
 
   &-header {
+    @include heading();
     font-size: var(--font-size-3);
-    font-weight: bold;
-    color: var(--neutral-900);
   }
 
   &-text {
     width: 80%;
     text-align: center;
+
+    @include body;
   }
 
   .features__img-container {
