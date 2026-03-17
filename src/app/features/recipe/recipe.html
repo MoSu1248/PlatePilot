@@ -10,34 +10,29 @@
 
   <section class="recipe-section">
     <div class="recipe-filters">
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Max Prep Time <img src="assets/images/icon-chevron-down.svg" alt="" />
-        </button>
-        <div class="dropdown-menu">
-          <div class="dropdown-item">Option 1</div>
-          <div class="dropdown-item">Option 2</div>
-          <div class="dropdown-item">Option 3</div>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Max Cook Time <img src="assets/images/icon-chevron-down.svg" alt="" />
-        </button>
-        <div class="dropdown-menu">
-          <div class="dropdown-item">Option 1</div>
-          <div class="dropdown-item">Option 2</div>
-          <div class="dropdown-item">Option 3</div>
-        </div>
-      </div>
+      
+      <app-prep-time-component
+        (prepTimeChanged)="filterPrepTime($event)"
+        (clearFilter)="clear()"
+      ></app-prep-time-component>
+      <app-cooking-time-component
+        (cookTimeChanged)="filterCookingTime($event)"
+        (clearFilter)="clear()"
+      ></app-cooking-time-component>
       <div class="search__container">
-        <img src="assets/images/icon-search.svg" alt="" />
-        <input type="text" placeholder="Search by name or ingredient…" />
+        <img src="assets/images/icon-search.svg" alt="" /><input
+          type="text"
+          placeholder="Search by name or ingredient…"
+          [(ngModel)]="searchTerm"
+          (input)="onSearch()"
+        />
       </div>
     </div>
 
     <div class="recipe-grid">
-      <app-recipe-card></app-recipe-card>
+      @for (recipe of recipes; track $index) {
+        <app-recipe-card [recipe]="recipe"></app-recipe-card>
+      }
     </div>
   </section>
 </div>

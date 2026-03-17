@@ -7,5 +7,6 @@ import { Logo } from '../../shared/icons/logo/logo';
   imports: [RouterLink, RouterLinkActive, Logo],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
+  standalone: true,
 })
 export class NavbarComponent {}

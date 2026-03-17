@@ -1,0 +1,17 @@
+<div class="dropdown" (mouseleave)="close()">
+  <button class="dropdown-toggle" (mouseenter)="open()">
+    Max Cook Time <img src="assets/images/icon-chevron-down.svg" alt="" />
+  </button>
+  @if (isOpen) {
+    <div class="dropdown-menuContainer">
+      <div class="dropdown-menu">
+        <button (click)="setFilter(0)">0 min</button>
+        <button (click)="setFilter(5)">5 min</button>
+        <button (click)="setFilter(10)">10 min</button>
+        <button (click)="setFilter(15)">15 min</button>
+        <button (click)="setFilter(20)">20 min</button>
+        <button (click)="clear()">Clear</button>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,13 @@
+@use '../../../../../styles/mixins' as *;
+
+.dropdown-toggle {
+  display: flex;
+  gap: 1rem;
+  @include body;
+  font-size: var(--font-size-7);
+  background-color: var(--neutral-000);
+  border-radius: 10px;
+  border: 1px solid var(--neutral-300);
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}

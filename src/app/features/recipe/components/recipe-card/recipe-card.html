@@ -1,11 +1,16 @@
 <div class="card">
-  <img src="../../../assets/images/avocado-tomato-wholegrain-toast-small.webp" alt="" />
-  <h3>Avocado & Tomato Wholegrain Toast</h3>
-  <p>Creamy avocado spread over toasted wholegrain bread, topped with juicy tomatoes.</p>
+  <img src="{{ recipe.image.large }}" alt="" />
+  <h3>{{ recipe.title }}</h3>
+  <!-- <ul class="card__tags">
+    @for (item of recipe.dishTypes | slice: 0 : 5; track $index) {
+      <li>{{ item }}</li>
+    }
+  </ul> -->
+  <p>{{ recipe.overview }}</p>
   <ul class="recipe-info">
-    <li><img src="assets/images/icon-servings.svg" alt="" />Servings: 2</li>
-    <li><img src="assets/images/icon-prep-time.svg" alt="" />Prep: 10 min</li>
-    <li><img src="assets/images/icon-cook-time.svg" alt="" />Cook: 20 min</li>
+    <li><img src="assets/images/icon-servings.svg" alt="" />Servings: {{ recipe.servings }}</li>
+    <li><img src="assets/images/icon-prep-time.svg" alt="" />Prep: {{ recipe.prepMinutes }} min</li>
+    <li><img src="assets/images/icon-cook-time.svg" alt="" />Cook: {{ recipe.cookMinutes }} min</li>
   </ul>
   <button class="card__btn">View Recipe</button>
 </div>

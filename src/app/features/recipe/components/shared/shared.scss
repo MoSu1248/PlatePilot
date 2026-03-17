@@ -1,0 +1,49 @@
+@use '../../../../../styles/mixins' as *;
+
+.dropdown {
+  position: relative;
+  height: 100%;
+}
+
+.dropdown-toggle {
+  display: flex;
+  gap: 1rem;
+  @include body;
+  font-size: var(--font-size-7);
+  background-color: var(--neutral-000);
+  border-radius: 10px;
+  border: 1px solid var(--neutral-300);
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+
+.dropdown-menuContainer {
+  padding-top: 0.5rem;
+  position: absolute;
+  width: 100%;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-000);
+  padding: 0.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-300);
+
+  button {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    text-align: left;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    @include body;
+    font-size: var(--font-size-9);
+    font-weight: var(--font-bold);
+
+    &:hover {
+      border-color: var(--neutral-900);
+    }
+  }
+}

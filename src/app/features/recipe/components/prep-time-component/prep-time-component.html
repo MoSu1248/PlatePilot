@@ -1,0 +1,15 @@
+<div class="dropdown" (mouseleave)="close()">
+  <button class="dropdown-toggle" (mouseenter)="open()">
+    Max Prep Time <img src="assets/images/icon-chevron-down.svg" alt="" />
+  </button>
+  @if (isOpen) {
+    <div class="dropdown-menuContainer">
+        <div class="dropdown-menu">
+          <button class="dropdown-item" (click)="setFilter(0)">0 min</button>
+          <button class="dropdown-item" (click)="setFilter(5)">5 min</button>
+          <button class="dropdown-item" (click)="setFilter(10)">10 min</button>
+          <button class="dropdown-item" (click)="clear()">clear</button>
+        </div>
+    </div>
+  }
+</div>
