@@ -1,0 +1,67 @@
+@use '../../../../../styles/mixins' as *;
+
+.recipe__detail-page {
+  @include body();
+  font-size: var(--font-size-7);
+  span {
+    color: var(--neutral-650);
+  }
+}
+
+.recipe__detail {
+  display: flex;
+  gap: 2rem;
+ 
+  &-img {
+    height: 580px;
+    width: 580px;
+    border-radius: 16px;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h1 {
+      @include heading();
+      font-weight: var(--font-extraBold);
+    }
+
+    p {
+      @include body;
+      color: var(--neutral-600);
+    }
+
+    h3 {
+      @include subheading;
+    }
+  }
+
+  .recipe-info {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      @include body;
+      font-size: var(--font-size-7);
+      font-weight: var(--font-bold);
+    }
+  }
+
+  .recipe__info-list {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-image: url('../../../../../assets/images/icon-bullet-point.svg'); /* Link to your image */
+    @include body;
+    font-size: var(--font-size-7);
+    color: var(--neutral-600);
+  }
+}

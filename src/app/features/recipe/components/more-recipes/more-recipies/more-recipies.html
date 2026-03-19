@@ -1,0 +1,8 @@
+<div class="more-recipes">
+  <h2>More Recipes</h2>
+  <div class="recipe-grid">
+    @for (recipe of otherRecipes; track $index) {
+      <app-recipe-card [recipe]="recipe"></app-recipe-card>
+    }
+  </div>
+</div>

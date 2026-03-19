@@ -12,5 +12,5 @@
     <li><img src="assets/images/icon-prep-time.svg" alt="" />Prep: {{ recipe.prepMinutes }} min</li>
     <li><img src="assets/images/icon-cook-time.svg" alt="" />Cook: {{ recipe.cookMinutes }} min</li>
   </ul>
-  <button class="card__btn">View Recipe</button>
+  <a class="card__btn" [routerLink]="['/recipes', recipe.slug]">View Recipe</a>
 </div>

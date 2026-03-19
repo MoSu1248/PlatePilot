@@ -1,0 +1,43 @@
+<div class="wrapper">
+  @if (recipe) {
+    <p class="recipe__detail-page"><span>Recipes </span>/ {{ recipe.title }}</p>
+    <div class="recipe__detail">
+      <img
+        class="recipe__detail-img"
+        src="{{ recipe.image.large }}"
+        alt="{{ recipe.title }} image"
+      />
+      <div class="recipe__detail-container">
+        <h1>{{ recipe.title }}</h1>
+        <p>{{ recipe.overview }}</p>
+        <ul class="recipe-info">
+          <li>
+            <img src="assets/images/icon-servings.svg" alt="" />Servings: {{ recipe.servings }}
+          </li>
+          <li>
+            <img src="assets/images/icon-prep-time.svg" alt="" />Prep: {{ recipe.prepMinutes }} min
+          </li>
+          <li>
+            <img src="assets/images/icon-cook-time.svg" alt="" />Cook: {{ recipe.cookMinutes }} min
+          </li>
+        </ul>
+
+        <h3>Ingredients :</h3>
+        <ul class="recipe__info-list">
+          @for (ingredient of recipe.ingredients; track $index) {
+            <li>{{ ingredient }}</li>
+          }
+        </ul>
+
+        <h3>Instructions :</h3>
+        <ul class="recipe__info-list">
+          @for (instruction of recipe.instructions; track $index) {
+            <li>{{ instruction }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  }
+  <!-- <app-more-recipies [allRecipes]="recipes" [currentSlug]="recipe.slug"></app-more-recipies> -->
+  <app-footer></app-footer>
+</div>
